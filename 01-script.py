@@ -4,11 +4,14 @@ import pprint
 from pymongo import MongoClient
 
 load_dotenv(find_dotenv())
-password = os.environ.get('MONGODB_PWD')
-connection_string = f"mongodb+srv://admin:{password}@cluster0.f5fvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+username = os.getenv('MONGODB_USERNAME')
+password = os.getenv('MONGODB_PWD')
+cluster = os.getenv('MONGODB_CLUSTER')
+authSource = os.getenv('MONGODB_AUTH_SOURCE', 'admin')
+authMechanism = 'SCRAM-SHA-1'
+connection_string = f"mongodb+srv://{username}:{password}@{cluster}/?authSource={authSource}&authMechanism={authMechanism}"
 
 client = MongoClient(connection_string)
-
 dbs = client.list_database_names()
 test_db = client.test
 collection = test_db.list_collection_names()
