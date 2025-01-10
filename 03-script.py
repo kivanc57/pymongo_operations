@@ -156,5 +156,3 @@ def get_relevance():
         }
     ])
     printer.pprint(list(result))
-
-get_relevance()
