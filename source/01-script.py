@@ -12,7 +12,7 @@ client = MongoClient(connection_string)
 dbs = client.list_database_names()
 test_db = client.test
 collection = test_db.list_collection_names()
-
+printer = pprint.PrettyPrinter()
 
 def insert_test_doc():
   collection = test_db.test
@@ -40,8 +40,6 @@ def create_documents():
     docs.append(doc)
   
   person_collection.insert_many(docs)
-
-printer = pprint.PrettyPrinter()
 
 def find_all_people():
   people = person_collection.find()
