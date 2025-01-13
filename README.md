@@ -69,9 +69,46 @@ pip install pymongo pandas pyarrow pymongoarrow python-dotenv
 
 ### Configuration
 
-⚙️ **MongoDB Connection**: Make sure to configure your MongoDB connection in a `.env` file with the necessary credentials (e.g., `MONGODB_USERNAME`, `MONGODB_PASSWORD`, `MONGODB_CLUSTER`, `MONGODB_AUTH_SOURCE`).
+⚙️ **MongoDB Connection**:  
+Ensure your MongoDB connection is properly configured in a `.env` file. This file should contain the necessary environment variables for your connection, such as:
+- `MONGODB_USERNAME`: Your MongoDB username.
+- `MONGODB_PASSWORD`: Your MongoDB password.
+- `MONGODB_CLUSTER`: The MongoDB cluster URL (for example, `cluster0.mongodb.net`).
+- `MONGODB_AUTH_SOURCE`: The authentication source, typically `admin` unless otherwise specified.
 
-⚙️ **MongoDB Atlas Setup**: If you are using MongoDB Atlas, ensure that your cluster is configured and accessible, and the relevant MongoDB Atlas Search index (`language_search`) is created.
+The connection setup in this project uses **`dotenv`** to load the environment variables from the `.env` file. The **`get_client()`** function from the `db_connection.py` file fetches these variables and establishes a connection to MongoDB.
+
+```python
+def get_client():
+  try:
+    # Load environmental variables
+    load_dotenv(find_dotenv())
+    username = os.getenv('MONGODB_USERNAME')
+    password = os.getenv('MONGODB_PWD')
+    cluster = os.getenv('MONGODB_CLUSTER')
+    authSource = os.getenv('MONGODB_AUTH_SOURCE', 'admin')
+    authMechanism = "SCRAM-SHA-1"
+  except Exception as e:
+    print(f"Fetching environment variables failed: {e}")
+    return None
+
+  # Establish the uri
+  try:
+    uri = f"mongodb+srv://{username}:{password}@{cluster}/?authSource={authSource}&authMechanism={authMechanism}"
+    return check_connection(uri)
+  except Exception as e:
+    print(f"Building URI or connection failed: {e}")
+    return None
+```
+
+⚙️ **MongoDB Atlas Search** index (`language_search`) is created and indexed for the appropriate fields, such as `category` or `question`. The `aggregate()` function in the `utils.py` file can be used to query the database using this index and perform various search operations such as fuzzy matching, synonym matching, and autocomplete.
+
+```python
+def aggregate(collection, pipeline, printer):
+    result = collection.aggregate(pipeline)
+    printer.pprint(list(result))
+```
+
 
 ⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
 
