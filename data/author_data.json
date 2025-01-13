@@ -1,0 +1,52 @@
+[
+  {
+    "first_name": "Sophia",
+    "last_name": "Anderson",
+    "date_of_birth": "1987-05-14"
+  },
+  {
+    "first_name": "Liam",
+    "last_name": "White",
+    "date_of_birth": "1991-09-23"
+  },
+  {
+    "first_name": "Olivia",
+    "last_name": "Harris",
+    "date_of_birth": "1994-02-12"
+  },
+  {
+    "first_name": "Noah",
+    "last_name": "Miller",
+    "date_of_birth": "1982-11-03"
+  },
+  {
+    "first_name": "Ava",
+    "last_name": "Davis",
+    "date_of_birth": "1998-07-18"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Moore",
+    "date_of_birth": "1985-06-28"
+  },
+  {
+    "first_name": "Mia",
+    "last_name": "Taylor",
+    "date_of_birth": "1993-03-04"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Wilson",
+    "date_of_birth": "1979-12-15"
+  },
+  {
+    "first_name": "Ella",
+    "last_name": "Thomas",
+    "date_of_birth": "1989-08-30"
+  },
+  {
+    "first_name": "Benjamin",
+    "last_name": "Martin",
+    "date_of_birth": "1981-10-07"
+  }
+]

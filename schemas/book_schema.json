@@ -1,0 +1,33 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["title", "authors", "publish_date", "type", "copies"],
+    "properties": {
+      "title": {
+        "bsonType": "string",
+        "description": "Title must be a string and is required."
+      },
+      "authors": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "description": "Each author must be a string."
+        },
+        "description": "Authors must be an array of strings and is required."
+      },
+      "publish_date": {
+        "bsonType": "string",
+        "description": "Publish date must be a valid date and is required."
+      },
+      "type": {
+        "enum": ["Fiction", "Non-Fiction"],
+        "description": "Type must be one of 'Fiction' or 'Non-Fiction'."
+      },
+      "copies": {
+        "bsonType": "int",
+        "minimum": 0,
+        "description": "Copies must be a non-negative integer and is required."
+      }
+    }
+  }
+}

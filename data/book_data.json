@@ -1,0 +1,12 @@
+[
+  {"title": "Foundations of AI", "authors": ["Kiwi Gordu"], "publish_date": "2017-03-14", "type": "Non-Fiction", "copies": 8},
+  {"title": "Deep Learning Insights", "authors": ["Jan Bart"], "publish_date": "2019-09-25", "type": "Non-Fiction", "copies": 10},
+  {"title": "Mysteries of the Algorithm", "authors": ["Jennifer Pit", "Alice Smith"], "publish_date": "2020-11-05", "type": "Fiction", "copies": 6},
+  {"title": "Programming Essentials", "authors": ["Bob Johnson"], "publish_date": "2018-07-19", "type": "Non-Fiction", "copies": 12},
+  {"title": "Journey to Cyberspace", "authors": ["Catherine Williams"], "publish_date": "2021-02-09", "type": "Fiction", "copies": 14},
+  {"title": "The Data Whisperer", "authors": ["David Brown"], "publish_date": "2020-06-30", "type": "Non-Fiction", "copies": 7},
+  {"title": "Legends of the Blockchain", "authors": ["Emma Jones", "Frank Garcia"], "publish_date": "2022-04-18", "type": "Fiction", "copies": 9},
+  {"title": "Quantum Computing Basics", "authors": ["Grace Martinez"], "publish_date": "2023-01-10", "type": "Non-Fiction", "copies": 5},
+  {"title": "Future of Humanity", "authors": ["Jan Bart", "Jennifer Pit"], "publish_date": "2023-07-25", "type": "Non-Fiction", "copies": 10},
+  {"title": "Virtual Horizons", "authors": ["Alice Smith", "Catherine Williams"], "publish_date": "2022-12-12", "type": "Fiction", "copies": 4}
+]
