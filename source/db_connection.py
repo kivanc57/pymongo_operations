@@ -1,6 +1,5 @@
 import os
 from pymongo import MongoClient
-from dotenv import load_dotenv, find_dotenv
 
 def check_connection(uri):
   client = MongoClient(uri)
@@ -15,7 +14,6 @@ def check_connection(uri):
 def get_client():
   try:
     # Load environmental variables
-    load_dotenv(find_dotenv())
     username = os.getenv('MONGODB_USERNAME')
     password = os.getenv('MONGODB_PWD')
     cluster = os.getenv('MONGODB_CLUSTER')
