@@ -8,12 +8,12 @@ It also includes MongoDB Atlas Search capabilities such as *fuzzy search*, *syno
 ⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
 
 ## Table of Contents
-- [📦 Features](#features)
-- [📑 Notebooks](#notebooks)
-- [🛠️ Setup](#setup)
-- [🏃 How to Run](#how-to-run)
-- [📜 License](#license)
-- [📬 Contact](#contact)
+- #### [📦 Features](#features)
+- #### [📑 Notebooks](#notebooks)
+- #### [🛠️ Setup](#setup)
+- #### [🏃 How to Run](#how-to-run)
+- #### [📜 License](#license)
+- #### [📬 Contact](#contact)
 
 ⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
 
@@ -27,7 +27,7 @@ It also includes MongoDB Atlas Search capabilities such as *fuzzy search*, *syno
 
 📦 **Atlas Vector Search**: Implement vector search in MongoDB using `$vectorSearch` with indexed embeddings for efficient retrieval.
 
-📦 **Vector Embeddings**: Generate sentence embeddings using `Hugging Face` and store them in MongoDB for semantic search.
+📦 **Vector Embeddings**: Generate sentence embeddings using `Hugging Face`🤗 and store them in MongoDB for semantic search.
 
 ⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
 
