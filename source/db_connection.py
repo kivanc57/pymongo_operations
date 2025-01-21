@@ -1,5 +1,8 @@
 import os
 from pymongo import MongoClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def check_connection(uri):
   client = MongoClient(uri)
